@@ -1,0 +1,38 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node bin/run.js",
+        "dev": "nodemon bin/run.js",
+        "test": "mocha"
+    },
+    "author": "Yehonatan Levi <leviyehonatan@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "config": "^3.0.1",
+        "cors": "^2.8.5",
+        "express": "^4.16.4",
+        "express-graphql": "^0.7.1",
+        "faker": "^4.1.0",
+        "graphql": "^14.1.1",
+        "graphql-tools": "^4.0.4",
+        "graphql-yoga": "^1.17.4",
+        "jsonwebtoken": "^8.5.0",
+        "merge-graphql-schemas": "^1.5.8",
+        "moment": "^2.24.0",
+        "mongoose": "^5.4.16",
+        "morgan": "^1.9.1",
+        "node-fetch": "^2.3.0",
+        "pretty-ms": "^4.0.0"
+    },
+    "devDependencies": {
+        "@playlyfe/gql": "^2.6.1",
+        "chai": "^4.2.0",
+        "chai-http": "^4.2.1",
+        "mocha": "^5.2.0",
+        "nodemon": "^1.18.9"
+    }
+}

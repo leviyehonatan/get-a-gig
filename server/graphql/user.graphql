@@ -1,0 +1,44 @@
+type Query {
+    searchMembers(name: String!, limit: Int): [Member!]
+    profile: Profile!
+}
+
+type Mutation {
+    signup(loginInformation: LoginInput!): SignupResponse!
+    login(loginInformation: LoginInput!): LoginResponse!
+    facebookLogin(facebookToken: String!): LoginResponse!
+}
+
+type LoginInformation {
+    email: String!
+    password: String!
+}
+
+input LoginInput {
+    email: String!
+    password: String!
+}
+
+type User {
+    id: ID!
+}
+
+type SignupResponse {
+    token: String
+    errors: [Error!]
+}
+
+type LoginResponse {
+    token: String
+    errors: [Error!]
+}
+
+type Profile {
+    picture: String
+    displayName: String
+}
+
+type Member {
+    displayName: String!
+    email: String!
+}

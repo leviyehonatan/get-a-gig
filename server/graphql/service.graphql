@@ -1,0 +1,24 @@
+type Query {
+    getUserServices: [Service!]
+    getUserService(id: ID): Service!
+}
+
+type Mutation {
+    saveService(service: ServiceInput!): Service!
+    updateService: Service!
+    deleteUserService(id: ID!): ID!
+}
+
+input ServiceInput {
+    id: ID
+    name: String!
+    description: String
+    members: [String!]
+}
+
+type Service {
+    id: ID!
+    name: String!
+    description: String
+    members: [User!]
+}
