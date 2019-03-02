@@ -10,6 +10,7 @@ const SAVE_SERVICE_MUTATION = gql`
         saveService(service: $service) {
             id
             name
+            description
         }
     }
 `;
